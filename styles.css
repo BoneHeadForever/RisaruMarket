@@ -1,112 +1,103 @@
-/* Genel Stiller */
-
+/* Genel stil ayarları */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 
+/* Header stil ayarları */
 header {
-    background-color: #282c34;
+    background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.banner {
+header img.banner {
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+    height: auto;
 }
 
-h1 {
-    margin: 20px 0;
-    font-size: 2.5rem;
-}
-
+/* Navigasyon stil ayarları */
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+/* Ürünler bölümü stil ayarları */
+#products {
+    padding: 20px;
 }
 
-section {
-    padding: 40px 20px;
-    margin: 0 auto;
-    max-width: 1000px;
+#products h2 {
     text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #282c34;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+/* Ürünler 4'lü sıra düzeni */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sütun düzeni */
+    gap: 20px; /* Ürünler arasındaki boşluk */
 }
 
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
-.trust-info {
-    margin-top: 30px;
-    font-style: italic;
-    color: #555;
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Maksimum genişlik */
+    margin-bottom: 10px;
 }
 
+.product h3 {
+    margin: 10px 0;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.product button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* Footer stil ayarları */
 footer {
-    background-color: #282c34;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px;
     position: fixed;
-    bottom: 0;
     width: 100%;
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
-}
-
-/* Sol ve Sağ Kenar Görselleri */
-.bina-sol, .bina-sag {
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100vh;
-    background-color: #282c34;
-    z-index: -1;
-}
-
-.bina-sol {
-    left: 0;
-}
-
-.bina-sag {
-    right: 0;
+    bottom: 0;
 }
