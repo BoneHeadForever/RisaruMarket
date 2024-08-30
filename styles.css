@@ -51,6 +51,25 @@ h2 {
     padding-bottom: 10px;
 }
 
+.blox-fruits-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.blox-fruit-image {
+    width: 30%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.trust-info {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+}
+
 .product-grid {
     display: flex;
     flex-wrap: wrap;
