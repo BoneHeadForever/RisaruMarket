@@ -6,10 +6,11 @@ body {
 }
 
 header {
-    background-color: #fff;
-    color: #333;
+    background-color: #333;
+    color: #fff;
     padding: 10px 0;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -18,12 +19,15 @@ header h1 {
 
 .banner {
     width: 100%;
-    height: auto;
+    height: auto; /* Banner'ın yüksekliği otomatik olarak ayarlanır */
+    max-height: 200px; /* Banner'ın yüksekliğini 200px ile sınırlandırır */
+    object-fit: cover; /* Resmin görünümünü düzenler */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -32,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -58,13 +62,13 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
-    flex: 1 1 calc(25% - 20px);
-    box-sizing: border-box;
+    width: 100%;
+    max-width: 220px;
 }
 
 button {
-    background-color: #ffcc00; /* Sarı */
-    color: #333;
+    background-color: #333;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -72,7 +76,7 @@ button {
 }
 
 button:hover {
-    background-color: #ffb800;
+    background-color: #555;
 }
 
 form {
@@ -96,11 +100,16 @@ form input, form textarea {
 }
 
 footer {
-    background-color: #fff;
-    color: #333;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
 }
