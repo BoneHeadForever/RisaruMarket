@@ -1,5 +1,5 @@
 function purchase(item) {
-    alert(item + " satın alındı!");
+    alert(item + " discord.gg/Risaru");
 }
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
