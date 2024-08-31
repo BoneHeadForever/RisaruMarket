@@ -7,19 +7,31 @@
     <title>Risaru</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="resimler/anaresim.png" type="image/png">
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PD69EC7JY"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-9PD69EC7JY');
     </script>
-
-    <!-- JavaScript Dosyasının Eklenmesi -->
-    <script src="script.js" defer></script>
+    <style>
+      .popup {
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: 18px;
+        font-weight: bold;
+        z-index: 1000;
+        text-align: center;
+      }
+    </style>
 </head>
 
 <body>
@@ -82,12 +94,19 @@
 
         <section id="contact">
             <h2>Bizimle İletişime Geçin</h2>
-            <form id="contactForm">
+            <form id="contact-form" action="https://formsubmit.co/boneheadude@gmail.com" method="POST" onsubmit="showPopup(); return false;">
                 <input type="text" name="name" placeholder="Adınız" required>
                 <input type="email" name="email" placeholder="E-posta Adresiniz" required>
                 <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
                 <button type="submit">Gönder</button>
+                <!-- Optional hidden fields for advanced features -->
+                <input type="hidden" name="_subject" value="Yeni İletişim Formu Gönderimi">
+                <input type="hidden" name="_next" value="https://risaru.com.tr/thank-you.html">
+                <input type="hidden" name="_autoresponse" value="Teşekkür ederiz! Mesajınız bize ulaştı ve en kısa sürede yanıt vereceğiz.">
             </form>
+            <div id="popup" class="popup">
+                <p>Gönderildi!</p>
+            </div>
         </section>
     </main>
 
@@ -96,6 +115,16 @@
     </footer>
 
     <div class="cursor"></div> <!-- İmleç animasyonu -->
+
+    <script>
+      function showPopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'block';
+        setTimeout(function() {
+          popup.style.display = 'none';
+        }, 10000); // 10 saniye
+      }
+    </script>
 </body>
 
 </html>
