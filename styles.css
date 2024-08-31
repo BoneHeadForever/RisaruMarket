@@ -1,103 +1,223 @@
-/* Genel stil ayarları */
+/* Genel Stiller */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Modern gradyan arka plan */
+    color: #333333;
+    transition: background-color 0.3s ease;
 }
 
-/* Header stil ayarları */
+/* Header */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    background-color: #ffffff;
+    color: #333333;
     text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-header img.banner {
-    width: 100%;
-    height: auto;
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-/* Navigasyon stil ayarları */
+header h1:hover {
+    color: #0056b3; /* Koyu mavi hover efekti */
+}
+
+/* Navigasyon */
+nav {
+    background-color: #0056b3; /* Koyu mavi */
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Ürünler bölümü stil ayarları */
-#products {
-    padding: 20px;
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #e0e0e0; /* Açık gri hover efekti */
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Daha belirgin metin gölgesi */
 }
 
-#products h2 {
-    text-align: center;
+/* Ana İçerik Stilleri */
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Ürünler 4'lü sıra düzeni */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 sütun düzeni */
-    gap: 20px; /* Ürünler arasındaki boşluk */
+/* Bölüm Stilleri */
+section {
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.product {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
+section:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Hover sırasında hafif yukarı hareket */
 }
 
-.product img {
-    width: 100%;
-    height: auto;
-    max-width: 150px; /* Maksimum genişlik */
-    margin-bottom: 10px;
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Mavi gradyan arka plan */
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.product h3 {
-    margin: 10px 0;
+.hero-content {
+    max-width: 50%;
 }
 
-.product p {
-    margin: 5px 0;
+.hero-content h2 {
+    font-size: 3em;
+    font-weight: 700;
+    transition: color 0.3s ease;
 }
 
-.product button {
-    background-color: #28a745;
-    border: none;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
+.hero-content h2:hover {
+    color: #e0e0e0; /* Açık gri renk hover efekti */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.btn-link {
     display: inline-block;
-    font-size: 16px;
-    margin: 10px 0;
-    cursor: pointer;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #007bff;
+    text-decoration: none;
     border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product button:hover {
-    background-color: #218838;
+.btn-link:hover {
+    background-color: #e0e0e0; /* Açık gri hover efekti */
+    color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer stil ayarları */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
+.hero-image img {
     width: 100%;
-    bottom: 0;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Hizmetler ve Sertifikalar */
+.service-grid, .certificate-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service, .certificate-item {
+    flex: 1;
+    padding: 20px;
+    background-color: #f5f5f5; /* Hafif gri arka plan */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service:hover, .certificate-item:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.service h3, .certificate-item h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+/* İletişim */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* İmleç Animasyonu */
+@keyframes cursor-blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.cursor {
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    animation: cursor-blink 1s step-end infinite;
 }
